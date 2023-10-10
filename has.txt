@@ -1,0 +1,228 @@
+Section 1 Task 1 :
+
+using System;
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.WriteLine("Hello World!");    
+    }
+  }
+}
+
+Section 1 Task 2  :
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      
+       Console.WriteLine("Please enter your name :");
+       string name  = Console.ReadLine();
+        Console.WriteLine("Hello!,"+ name);
+      
+    }
+  }
+}
+
+
+Section 1 Task 3  :
+
+
+
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      
+       Console.WriteLine("Please enter number 1  :");
+       int num1 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Please enter number 2  :");
+       int num2 = Convert.ToInt32(Console.ReadLine());
+       int result = num1 + num2 ;
+        Console.WriteLine("Your result  is ="+ result.ToString());
+        
+    }
+  }
+}
+Section 1 Task 4 :
+using System;
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      
+      Console.WriteLine("Please input the number to square  :");   
+      int num1 = Convert.ToInt32(Console.ReadLine());
+      int num2 = num1*num1;
+      Console.WriteLine("The square of the number is:" + num2.ToString()); 
+      
+    }
+  }
+}
+Section 1 Task 5 :
+using System;
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      for (int a=1; a<=100; a++)
+      { 
+      if(a%2==0)
+      {
+       Console.Writeline(a.ToString());
+      }
+      }
+      
+     }
+  }
+}
+
+Section 2 Task 1 :
+
+using System;
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Please Tell the number you want to sum up to:");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+             int j= 0; 
+
+      for (int a=1; a<=num1; a++)
+      { 
+        j=j+a;
+      }
+      Console.WriteLine("The sum is=" + j.ToString()); 
+     }
+  }
+}
+
+Section 2 Task 2 :
+using System;
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+        Console.WriteLine("The tables for numbers upto 12 are :");
+   
+
+      for (int a=0; a<=12; a++)
+      { for (int b = 1; b<=10; b++)
+        {
+        int pro= a*b;
+        Console.WriteLine(a.ToString() + "*" + b.ToString() +"=" +pro.ToString() ); 
+        }
+      }
+      
+     }
+  }
+}
+Section 2 Task 3 :
+
+using System;
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Give the number you want prime numbers up to  :");
+       int num = Convert.ToInt32(Console.ReadLine());
+
+      for (int a=0; a<=num; a++)
+      { for (int b = 2; b<=num; b++)
+        {
+         if (a!=b && a%b==0) 
+         {
+         break;
+         }
+         else
+         {
+            Console.WriteLine( a.ToString()); 
+         }
+         
+        }
+      }
+      
+     }
+  }
+}
+Section 2 Task 4 :
+using System;
+
+namespace HelloWorld
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Give the number you want factorial of :");
+       int num = Convert.ToInt32(Console.ReadLine());
+       int factorial=1;
+
+      for (int a=0; a<=num; a++)
+      {  factorial=factorial*a;
+      }
+       Console.WriteLine( factorial.ToString()); 
+     }
+  }
+}
+
+Section 2 Task 5 :
+using System;
+
+namespace MyApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the value of n: ");
+            if (int.TryParse(Console.ReadLine(), out int n) && n >= 0)
+            {
+                int[] Fib = new int[n + 1];
+                Fib[0] = 0;
+                Fib[1] = 1;
+
+                for (int i = 2; i <= n; i++)
+                {
+                    Fib[i] = Fib[i - 2] + Fib[i - 1];
+                }
+
+                Console.WriteLine("Fibonacci Sequence up to " + n.ToString + ":");
+
+                for (int j = 0; j <= n; j++)
+                {
+                    Console.WriteLine(Fib[j].ToString());
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter a non-negative integer.");
+            }
+        }
+    }
