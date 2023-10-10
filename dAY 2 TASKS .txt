@@ -1,0 +1,37 @@
+Section 3:
+11. Write a program that searches for number n in an array of 5 (where n is user input).
+12. Write a program that checks if a string is a palindrome.
+13. Write a program that finds the largest and smallest number in an unsorted array of integers.
+14. Write a program that prints a right angle triangle using the "*" character, with the height based on user input. (using loops and following is only sample input)
+
+*
+**
+***
+****
+*****
+
+
+15. Write a program that prints the following pattern up to n rows (where n is user input).
+
+      *
+     *** 
+    *****
+   *******
+ *********
+
+
+Section 4:
+16. Write a program that takes a string as input and outputs the reverse of that string. For example, if the input is "hello," the output should be "olleh." 
+17. Write a program that sorts an array. (take input as random numbers)
+18. Write a program that checks if a given number is a perfect number.
+(sum of all divisors excluding itself should be equal to that number e.g.; 1 + 2 + 3 = 6)
+19. Write a program that prints the following pattern up to n rows (where n is user input).
+
+1
+12
+123
+1234
+...
+123...n
+
+20. Write a program that finds the longest common subsequence of two given strings. A subsequence is a sequence that appears in the same relative order but not necessarily contiguous. For example, for the input strings "ABCDGH" and "AEDFHR," the longest common subsequence is "ADH."
