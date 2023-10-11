@@ -1,0 +1,38 @@
+
+CREATE TABLE Courses(
+CourseName  varchar(50),
+CourseID int PRIMARY KEY, 
+);
+CREATE TABLE Students (
+ StudentID int PRIMARY KEY ,
+FirstName varchar(50),
+LastName  varchar(50),
+Age int,
+CourseID int ,
+  CONSTRAINT FK_CourseID FOREIGN KEY (CourseID)
+    REFERENCES Courses(CourseID),
+);
+INSERT INTO Courses (CourseName,CourseID)
+VALUES
+('math', '1'),
+('sciences', '2'),
+('english', '3'),
+('mechanics', '4'),
+('statistics', '5');
+INSERT INTO Students ( StudentID,
+FirstName,
+LastName,
+Age)
+VALUES
+('1','Hassan','saeed','21'),
+('2','Hassan','saeed','21'),
+('3','Hassan','saeed','21'),
+('4','Hassan','saeed','21'),
+('5','Hassan','saeed','21'),
+('6','Hassan','saeed','21'),
+('7','Hassan','saeed','21'),
+('8','Hassan','saeed','21'),
+('9','Hassan','saeed','21'),
+('0','Hassan','saeed','21');
+
+
