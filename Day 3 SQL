@@ -40,6 +40,9 @@ SET Age='25'
 WHERE StudentID=5;
 DELETE FROM Students WHERE StudentID=5;
 
+SELECT FirstName FROM Students
+WHERE Age
+BETWEEN  18 AND  22;
 
 
 
