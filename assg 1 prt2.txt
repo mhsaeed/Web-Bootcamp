@@ -1,7 +1,6 @@
 Section 3:
-Search for a Number in an Array:
-csharp
-Copy code
+Search for a Number in an Array;
+
 using System;
 
 class SearchNumberInArray
@@ -29,8 +28,7 @@ class SearchNumberInArray
     }
 }
 Check if a String is a Palindrome:
-csharp
-Copy code
+
 using System;
 
 class PalindromeCheck
@@ -64,8 +62,7 @@ class PalindromeCheck
     }
 }
 Find Largest and Smallest Number in an Array:
-csharp
-Copy code
+
 using System;
 using System.Linq;
 
