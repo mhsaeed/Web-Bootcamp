@@ -1,0 +1,40 @@
+ 
+SQL Practical Assignment
+
+Objective
+The goal of this assignment is to reinforce your understanding of SQL basics, data relationships, queries, and aggregation functions. You will create a database, tables, and establish relationships between them. You will also perform various SQL operations like data insertion, updating, deletion, and querying.
+
+Task 1: Create a Database
+1.	Create a new database called [Your EmployeeID]_DB. Sample DB name: 4875_DB
+Task 2: Create Tables
+1.	Create a table called Students with the following columns:
+StudentID (Primary Key)
+FirstName
+LastName
+Age
+CourseID (Foreign Key)
+2.	Create another table called Courses with the following columns:
+CourseID (Primary Key)
+CourseName
+Task 3: Insert Data
+1.	Insert at least 5 records into the Courses table.
+2.	Insert at least 10 records into the Students table, making sure to associate students with courses.
+Task 4: Update and Delete Records
+1.	Update the age of one of the students.
+2.	Delete a record from the Students table.
+Task 5: Queries and Filters
+1.	Write a query to list all students older than 20.
+2.	Write a query to list all students enrolled in a specific course, along with the course name.
+
+Task 6: Aggregation Functions
+1.	Use the COUNT function to find the total number of students.
+2.	Use the AVG function to find the average age of students.
+
+Task 7: Selection queries
+1.	List the names of students who are not enrolled in any course.
+2.	Find the most popular course (the course with the most students enrolled).
+3.	List the students who are older than the average age of students.
+4.	Find the total number of students and average age for each course.
+5.	List the courses that have no students enrolled in them.
+6.	List students who share courses with a specific student (choose one from your records).
+7.	For each course, list 
