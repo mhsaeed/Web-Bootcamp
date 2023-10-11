@@ -35,4 +35,12 @@ VALUES
 ('9','Hassan','saeed','21'),
 ('0','Hassan','saeed','21');
 
+UPDATE Students
+SET Age='25'
+WHERE StudentID=5;
+DELETE FROM Students WHERE StudentID=5;
+
+
+
+
 
