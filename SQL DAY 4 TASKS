@@ -1,0 +1,145 @@
+
+CREATE DATABASE databasename;
+--GO
+USE DB4875
+GO
+-- Create the Students table
+CREATE TABLE Students (
+    StudentID INT IDENTITY(0,1) PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Age INT,
+    CourseID INT, 
+    FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)-- This will be a foreign key referencing the CourseID in the Courses table
+);
+
+-- Create the Courses table
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100)
+);
+
+INSERT INTO Courses (CourseID, CourseName)
+VALUES
+    (1, 'Mathematics'),
+    (2, 'History'),
+    (3, 'Biology'),
+    (4, 'Computer Science'),
+    (5, 'Art');
+-- Insert data into the Students table
+INSERT INTO Students (StudentID, FirstName, LastName, Age, CourseID)
+VALUES
+    (1, 'John', 'Smith', 22, 1), -- John is enrolled in Mathematics (CourseID 1)
+    (2, 'Alice', 'Johnson', 19, 2), -- Alice is enrolled in History (CourseID 2)
+    -- Add more records as needed
+ UPDATE Students
+ SET Age=21,
+ WHERE StudentID = 1;
+ 
+ DELETE FROM Students
+ WHERE StudentID = 1;
+ SELECT * FROM Students
+WHERE Age > 20;
+ 
+ SELECT * FROM Students,Courses
+ FROM Students 
+ JOIN Courses ON Courses.CourseID= Students.CourseID
+ WHERE Courses.CourseID= 2;
+ 
+ SELECT COUNT(*) 
+ FROM Students ;
+ 
+  SELECT AVG(Age) 
+ FROM Students; 
+ 
+ 
+
+
+
+CREATE PROCEDURE AddNewStudent
+    @StudentName VARCHAR(50),
+    @Age INT,
+    @StudentID INT
+    @CourseID INT
+AS
+BEGIN
+    INSERT INTO Students(Name, Age, DepartmentID,CourseID)
+    VALUES (@StudentName, @Age, @StudentID,@CourseID);
+END;
+GO
+
+CREATE PROCEDURE UpdateStudentAge
+    @ID INT,
+    @NewAge INT
+AS
+BEGIN
+    UPDATE Students
+    SET Age = @NewAge
+    WHERE StudentID = @ID;
+END;
+GO
+
+CREATE PROCEDURE DeleteStudent
+    @ID INT
+AS
+BEGIN
+    DELETE FROM Students
+    WHERE StudentID = @ID;
+END;
+GO
+ CREATE PROCEDURE GetAllStudents
+AS
+BEGIN
+    SELECT * FROM Students;
+END;
+GO
+
+SELECT * FROM Students
+WHERE CourseID IS NULL;
+
+SELECT Courses.CourseName, COUNT(*) AS EnrollmentCount
+FROM Courses
+LEFT JOIN Students ON Courses.CourseID = Students.CourseID
+GROUP BY Courses.CourseName
+ORDER BY EnrollmentCount DESC
+LIMIT 1;
+
+SELECT * FROM Students
+WHERE Age>(SELECT AVG(Age) FROM Students);
+
+SELECT Courses.CourseName, COUNT(Students.CourseID) AS EnrollmentCount, AVG(Students.Age) AS AVGAge
+FROM Courses
+LEFT JOIN Students ON Courses.CourseID = Students.CourseID
+GROUP BY Courses.CourseName
+ORDER BY EnrollmentCount DESC
+LIMIT 1;
+
+SELECT Courses.CourseName, COUNT(Students.CourseID) AS EnrollmentCount, AVG(Age) AS AVGAge
+FROM Courses
+LEFT JOIN Students ON Courses.CourseID = Students.CourseID
+GROUP BY Courses.CourseName
+ORDER BY EnrollmentCount DESC
+LIMIT 1;
+
+SELECT Courses.CourseName
+FROM Courses
+LEFT JOIN Students ON Courses.CourseID = Students.CourseID
+WHERE Students.StudentID IS NULL;
+
+SELECT Courses.CourseName
+FROM Courses
+LEFT JOIN Students ON Courses.CourseID = Students.CourseID
+WHERE Students.StudentID IS NULL;
+
+SELECT Students.StudentName
+FROM  Courses
+JOIN Students ON Student.CourseID=Courses.CourseID
+WHERE Age= ( SELECT MAX(Age) FROM Students )
+
+SELECT Students.StudentName
+FROM  Courses
+JOIN Students ON Student.CourseID=Courses.CourseID
+WHERE Age= ( SELECT MIN(Age) FROM Students )
+
+
+ 
