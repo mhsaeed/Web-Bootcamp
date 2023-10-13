@@ -111,3 +111,6 @@ select * from Departments
 select * from Employees emp
 join Departments dept on dept.DeptID = emp.DepartmentId
 where dept.DeptName  = 'HR'
+
+
+

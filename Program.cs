@@ -1,7 +1,8 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
+using Microsoft.Data.SqlClient
 
-string connectionString = "Server=cmdlhrdb01;Database=DemoDB;Trusted_Connection=True;";
+string connectionString = "Server=cmdlhrdb01;Database=5058;Trusted_Connection=True;";
 using (SqlConnection connection = new SqlConnection(connectionString))
 {
     // 1. Execute Stored Procedure to Get All Employees
